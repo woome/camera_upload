@@ -1,0 +1,17 @@
+<project name="localcam build" default="swf" basedir="src">
+    <dirname property="builddir" file="${ant.file}"/>
+    <property name="flex_dir" location="${user.home}/flex_sdk_3.5"/>
+    <property name="mxmlc" location="${flex_dir}/bin/mxmlc"/>
+    
+    <target name="swf">
+        <delete file="${basedir}/../CameraPhoto.swf"/>
+        <exec executable="${mxmlc}" dir="${basedir}" failonerror="true">
+            <arg line="-incremental"/>
+            <arg line="--target-player=10.0.0"/>
+            <arg line="-output ${basedir}/../site/CameraPhoto.swf"/>
+            <arg line="--"/>
+            <arg line="WebCameraThing.mxml"/>
+        </exec>
+    </target>
+
+</project>

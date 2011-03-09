@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <script src="http://www.google.com/jsapi"></script>
+        <script>
+            google.load("swfobject", "2.2");
+            google.load("jquery", "1.4");
+        </script>
+        <script type="text/javascript" language="javascript">
+            params = {
+            "allowScriptAccess": "always",
+            "wmode": "opaque",
+            "bgcolor": "#ffffff"
+            };
+            swfobject.embedSWF("CameraPhoto.swf", "video", "320px", "320px", "10.0.0", null, "", params);
+        </script>
+    </head>
+    <body>
+        <div id="header">
+            <div>
+                <h1>web cam</h1>
+            </div>
+        </div>
+        <div id="content">
+           <div id="webcam">
+                <div id="videoWrapper">
+                    <div id="video">
+                        <p><strong>Uh-oh!</strong> - looks like you don't have the Adobe Flash Player installed or it's an old version.</p>
+                        <p><a href="http://www.adobe.com/go/getflashplayer" target="_blank"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" border="0"/></a></p>
+                        <p>Please <a href="http://www.adobe.com/go/getflashplayer" target="_blank">download it here</a> and try again</p>
+                    </div>
+                </div>
+        </div>
+    </body>
+</html>
