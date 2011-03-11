@@ -6,12 +6,16 @@
             google.load("jquery", "1.4");
         </script>
         <script type="text/javascript" language="javascript">
+            function cameraphoto_log () {
+            console.log(arguments);
+            }
+
             params = {
             "allowScriptAccess": "always",
             "wmode": "opaque",
             "bgcolor": "#ffffff"
             };
-            swfobject.embedSWF("CameraPhoto.swf", "video", "320px", "320px", "10.0.0", null, "", params);
+            swfobject.embedSWF("CameraPhoto.swf", "video", "500px", "500px", "10.0.0", null, "", params);
         </script>
     </head>
     <body>
