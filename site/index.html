@@ -9,6 +9,10 @@
             function cameraphoto_log () {
             console.log(arguments);
             }
+            
+            function camera() {
+            return swfobject.getObjectById("video");
+            }
 
             params = {
             "allowScriptAccess": "always",
@@ -26,6 +30,8 @@
         </div>
         <div id="content">
            <div id="webcam">
+                <a href="javascript:;" onclick="camera()._snap('/photoupload', 0.75, false);">snap</a>
+                <a href="javascript:;" onclick="camera()._ping();">ping</a>
                 <div id="videoWrapper">
                     <div id="video">
                         <p><strong>Uh-oh!</strong> - looks like you don't have the Adobe Flash Player installed or it's an old version.</p>
@@ -33,6 +39,7 @@
                         <p>Please <a href="http://www.adobe.com/go/getflashplayer" target="_blank">download it here</a> and try again</p>
                     </div>
                 </div>
+           </div>
         </div>
     </body>
 </html>
