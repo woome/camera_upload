@@ -1,0 +1,10 @@
+A web camera uploader in ActionScript (with a demo in django).
+
+This is an amalgamation of two other projects:
+
+ 
+ * [[http://code.google.com/p/jpegcam/|an excellent webcam uploader]]
+ * [[http://code.google.com/p/in-spirit/wiki/MultipartURLLoader|a multipart form maker]]
+
+The webcam tool is built on [[https://github.com/mikechambers/as3corelib|Mike Chambers as3 library]], 
+code from which is included in this project.
