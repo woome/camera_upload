@@ -2,9 +2,34 @@ A web camera uploader in ActionScript (with a demo in django).
 
 This is an amalgamation of two other projects:
 
- 
  * [[http://code.google.com/p/jpegcam/|an excellent webcam uploader]]
  * [[http://code.google.com/p/in-spirit/wiki/MultipartURLLoader|a multipart form maker]]
 
 The webcam tool is built on [[https://github.com/mikechambers/as3corelib|Mike Chambers as3 library]], 
 code from which is included in this project.
+
+The point of this is that everything in here should be completly self
+contained ///except/// the need for a flex compiler.
+
+
+== Prerequesites ==
+
+ * flex sdk 3.5 compiler
+ * ant
+ * [[veh|http://github.com/nicferrier/veh]]
+
+
+== Building ==
+
+To build the AS3 source use ant:
+
+
+{{{
+ant
+}}}
+
+To make the django app, use veh to pull dependancies:
+
+{{{
+veh shell -- cd siteapp \; python manage.py runserver 8008
+}}}
