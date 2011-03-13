@@ -6,13 +6,23 @@
             google.load("jquery", "1.4");
         </script>
         <script type="text/javascript" language="javascript">
-            function cameraphoto_log () {
-            console.log(arguments);
+            function cameraphoto_log (logmsg) {
+            console.log(logmsg);
             }
             
             function camera() {
             return swfobject.getObjectById("video");
             }
+
+            var webcam = {
+              "flash_notify": function (status, args) {
+                if (status == "success") {
+                  jQuery("#videoupload").html(args);
+                  var new_url = jQuery("#videoupload a").attr("href");
+                  document.location = new_url;
+                }
+              }
+            };
 
             params = {
             "allowScriptAccess": "always",
@@ -30,13 +40,15 @@
         </div>
         <div id="content">
            <div id="webcam">
-                <a href="javascript:;" onclick="camera()._snap('/photoupload', 0.75, false);">snap</a>
+                <a href="javascript:;" onclick="camera()._snap('/photoupload/', 0.75, false);">snap</a>
                 <a href="javascript:;" onclick="camera()._ping();">ping</a>
                 <div id="videoWrapper">
                     <div id="video">
                         <p><strong>Uh-oh!</strong> - looks like you don't have the Adobe Flash Player installed or it's an old version.</p>
                         <p><a href="http://www.adobe.com/go/getflashplayer" target="_blank"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" border="0"/></a></p>
                         <p>Please <a href="http://www.adobe.com/go/getflashplayer" target="_blank">download it here</a> and try again</p>
+                    </div>
+                    <div id="videoupload" style="display:none;">
                     </div>
                 </div>
            </div>
