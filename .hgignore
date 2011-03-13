@@ -1,0 +1,8 @@
+syntax: glob
+*.cache
+.*\\.svn
+*.pyc
+*~
+.ve*
+siteapp/site/photos
+siteapp/devdb
